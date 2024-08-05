@@ -55,7 +55,7 @@ def getContours(img,imgContour):
     contours, hierarchy = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     for contour in contours:
         area = cv2.contourArea(contour)
-        areaMin = cv2.getTrackbarPos("Area", "Parameters")
+        areaMin = cv2.getTrackbarPos("Area", "Countour Parameters")
         #if abs(area - areaMin) <= 2000:
         if area>=areaMin:
             cv2.drawContours(imgContour, contour, -1, (255, 0, 255), 7) #7 - width of the count
