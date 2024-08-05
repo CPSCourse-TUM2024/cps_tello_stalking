@@ -13,7 +13,7 @@ tello.up_down_velocity = 0
 tello.yaw_velocity = 0
 tello.speed = 0
 
-#initial imagge parameters
+#initial image parameters
 width = 640  
 height = 480  
 outVis = 100 #zone range where object is out of center
@@ -25,7 +25,6 @@ tello.streamon()
 
 halfH = int(height/2)
 halfW = int(width/2)
-
 
 global imgContour
 global direction #future decision where to move
@@ -171,7 +170,6 @@ while True:
     
     if tello.send_rc_control:
        tello.send_rc_control(tello.left_right_velocity, tello.for_back_velocity, tello.up_down_velocity, tello.yaw_velocity)
-    #print(dir)
 
     #show the images
     scale = 0.6 #here you can configure images for your screen size
