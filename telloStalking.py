@@ -173,10 +173,6 @@ while True:
     #print(dir)
 
     #show the images
-    import cv2
-
-
-    
     scale = 0.6 #here you can configure images for your screen size
     imgLeft_resized = cv2.resize(imgLeft, (0, 0), None, scale, scale)
     result_resized = cv2.resize(result, (0, 0), None, scale, scale)
