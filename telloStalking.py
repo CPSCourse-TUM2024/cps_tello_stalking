@@ -20,7 +20,7 @@ outVis = 100 #zone range where object is out of center
 
 
 #turn on the stream
-me.streamon()
+tello.streamon()
 
 
 halfH = int(height/2)
