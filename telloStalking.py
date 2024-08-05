@@ -29,6 +29,7 @@ halfW = int(width/2)
 
 global imgContour
 global direction #future decision where to move
+direction = 0
 
 #skip for activation function (as while loop updates the state)
 def empty(a):
@@ -149,13 +150,13 @@ while True:
        fly = 0
 
     #perform movements according to decision made
-    if dir == 1:
+    if direction == 1:
        tello.yaw_velocity = -50
-    elif dir == 2:
+    elif direction == 2:
        tello.yaw_velocity = 50
-    elif dir == 3:
+    elif direction == 3:
        tello.up_down_velocity= 50
-    elif dir == 4:
+    elif direction == 4:
        tello.up_down_velocity= -50   
     else:
        tello.left_right_velocity = 0 
